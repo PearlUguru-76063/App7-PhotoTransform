@@ -175,6 +175,35 @@ console.log("Blue-only image drawn on second canvas");
         context.fillText("Original image will go here", 10, 20);
       </script>
 
+     <!-- ================= SECOND CANVAS (BLUE FILTER OUTPUT) ================= -->
+
+<!-- This canvas will display the processed image where only the blue color is visible -->
+<canvas id="blueCanvas" width="600" height="500" style="border:1px solid #d3d3d3;"></canvas>
+
+<script>
+  // Get the second canvas element from the HTML using its ID
+  var blueCanvas = document.getElementById("blueCanvas");
+
+  // Get the drawing context for the second canvas
+  // This allows us to draw images and text onto the canvas
+  var blueCtx = blueCanvas.getContext("2d");
+
+  // Set the font style for the starting text
+  blueCtx.font = "20px Calibri";
+
+  // Set the text color to black
+  blueCtx.fillStyle = "black";
+
+  // Align the text to the center of the canvas
+  blueCtx.textAlign = "center";
+
+  // Display starting text so the user knows what this canvas will show
+  // The text is placed in the middle of the canvas
+  blueCtx.fillText("Blue Intensity Image", blueCanvas.width / 2, blueCanvas.height / 2);
+</script>
+
+<!-- ===================================================================== -->
+
     </div><!-- /content -->
     <div data-role="footer" data-position="fixed">
       <p> Pearl's DIY Diagnostics</p>
